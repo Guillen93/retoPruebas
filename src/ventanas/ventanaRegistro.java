@@ -139,9 +139,9 @@ public class ventanaRegistro extends JFrame {
 
 		constraints.gridx = 0;
 		constraints.gridy = 5;
-		jPanel.add(claseLabel, constraints);
+		jPanel.add(cargoLabel, constraints);
 		constraints.gridx = 1;
-		jPanel.add(ClaseBox, constraints);
+		jPanel.add(CargoBox, constraints);
 
 		constraints.gridx = 0;
 		constraints.gridy = 6;
@@ -229,11 +229,11 @@ public class ventanaRegistro extends JFrame {
 	}
 
 	public static JComboBox<String> getClaseBox() {
-		return ClaseBox;
+		return CargoBox;
 	}
 
 	public void setClaseBox(JComboBox<String> claseBox) {
-		ClaseBox = claseBox;
+		CargoBox = claseBox;
 	}
 
 	public static JCalendar getCalendarFechNac() {
