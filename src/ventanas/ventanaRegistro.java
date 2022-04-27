@@ -23,16 +23,18 @@ public class ventanaRegistro extends JFrame {
 	public static String FICHERO = "alumno.txt";
 	public static final String RUTA = "c://trastero//";
 
-	private static JComboBox<String> ClaseBox;
+	private static JComboBox<String> CargoBox;
 	private JPanel jPanel = null;
 	private static JCalendar calendarFechNac;
 
-	JButton botonLogin,botonRegistro,BotonInicio;
-	JLabel nomLabel, apellidoLabel, apellido2Label, fechLabel, dniLabel, claseLabel;
+	JButton botonLogin, botonRegistro, BotonInicio;
+	JLabel nomLabel, apellidoLabel, apellido2Label, dniLabel, passwd1Label, passwd2Label, fechLabel, cargoLabel;
 	static JTextField nombreField;
 	static JTextField apellidoField;
 	static JTextField apellido2Field;
 	static JTextField dniField;
+	static JTextField passwd1Field;
+	static JTextField passwd2Field;
 
 	public ventanaRegistro() {
 
@@ -50,27 +52,39 @@ public class ventanaRegistro extends JFrame {
 		apellidoLabel = new JLabel();
 		apellidoField = new JTextField(15);
 		apellidoLabel.setText("PRIMER APELLIDO");
+
 		// creamos el 2ºapellido en fomulario
 		apellido2Label = new JLabel();
 		apellido2Field = new JTextField(15);
 		apellido2Label.setText("SEGUNDO APELLIDO");
-		// añadimos calendario para la fech nacimiento
-		fechLabel = new JLabel();
-		calendarFechNac = new JCalendar();
-		fechLabel.setText("FECHA NACIMIENTO");
 
 		// creamos el dni en fomulario
 		dniLabel = new JLabel();
 		dniField = new JTextField(15);
 		dniLabel.setText("DOCUMENTO DE IDENTIDAD");
+
+		// creamos LA CONTRASEÑA en fomulario
+		passwd1Label = new JLabel();
+		passwd1Field = new JTextField(15);
+		passwd1Label.setText("CONTRASEÑA");
+
+		// creamos REPETIR LA CONTRASEÑA en fomulario
+		passwd2Label = new JLabel();
+		passwd2Field = new JTextField(15);
+		passwd2Label.setText("REPETIR CONTRASEÑA");
+
+		// añadimos calendario para la fech nacimiento
+		fechLabel = new JLabel();
+		calendarFechNac = new JCalendar();
+		fechLabel.setText("FECHA NACIMIENTO");
+
 		// creamos el combobox en formulario
-		claseLabel = new JLabel();
-		claseLabel.setText("CLASE");
-		ClaseBox = new JComboBox<String>();
-		ClaseBox.addItem("                   1DAM                   ");
-		ClaseBox.addItem("                   2DAM                   ");
-		ClaseBox.addItem("                   1DAW                   ");
-		ClaseBox.addItem("                   2DAW                   ");
+		cargoLabel = new JLabel();
+		cargoLabel.setText("CLASE");
+		CargoBox = new JComboBox<String>();
+		CargoBox.addItem("               EMPLEADO                   ");
+		CargoBox.addItem("               DIRECTOR PROVINCIAL        ");
+		CargoBox.addItem("               DIRECTOR ESTATAL           ");
 
 		// CREAMOS EL BOTON
 		botonRegistro = new JButton("REGISTRAR");

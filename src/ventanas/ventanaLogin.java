@@ -14,6 +14,8 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 import eventos.BotonSumit;
+import eventos.goRegistroEvent;
+import eventos.inicioEvent;
 
 public class ventanaLogin extends JFrame {
 	/**
@@ -114,7 +116,13 @@ public class ventanaLogin extends JFrame {
 		botonSumit.setActionCommand("OK");
 		botonSumit.addActionListener(login) ;
 		
+		inicioEvent goInicio=new inicioEvent();
+		botonInicio.setActionCommand("OK");
+		botonInicio.addActionListener(goInicio) ;
 		
+		goRegistroEvent goRegistro=new goRegistroEvent();
+		botonRegistro.setActionCommand("OK");
+		botonRegistro.addActionListener(goRegistro) ;
 	}
 
 	
@@ -139,5 +147,10 @@ public class ventanaLogin extends JFrame {
 			e.printStackTrace();
 		}
 	}
-
+	public static void resetearDatosLogin() {
+		//TODO
+	}
+	public static void comprobarLogin() {
+		//TODO
+	}
 }
